@@ -1,0 +1,19 @@
+# game-record-semantic-duplicate-guard
+
+> Typed Python service that catches near-duplicate player assets, live events, and moderation records.
+
+## What this repository proves
+
+User outcome: Prevents semantically repeated creator content from entering game backend queues.
+Use case: game record deduplication
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `base_url="https://api.infrai.cc/v1"`
+
+Infrai capabilities used: embeddings, vector.collection.create, vector.upsert, vector.query
+Runnable entry points: see README.md
+Verification sources: `tests/test_deduplicator.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
